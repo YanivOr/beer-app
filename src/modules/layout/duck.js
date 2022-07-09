@@ -2,7 +2,6 @@
 const prefix = 'layout';
 const SET_ITEMS_PER_PAGE = `${prefix}/SET_ITEMS_PER_PAGE`;
 const SET_PAGE_NUM = `${prefix}/SET_PAGE_NUM`;
-const TOGGLE_SIDEBAR = `${prefix}/TOGGLE_SIDEBAR`;
 
 /** action creators **/
 const setItemsPerPage = (itemsPerPage) => ({
@@ -13,10 +12,6 @@ const setItemsPerPage = (itemsPerPage) => ({
 const setPageNum = (pageNum) => ({
   type: SET_PAGE_NUM,
   payload: { pageNum }
-});
-
-const toggleSideBar = () => ({
-  type: TOGGLE_SIDEBAR,
 });
 
 /** reducer **/
@@ -34,12 +29,6 @@ export const layout = (state = {}, action) => {
         pageNum: action.payload.pageNum
       };
     }
-    case TOGGLE_SIDEBAR: {
-      return {
-        ...state,
-        // sideBarOpen: !state.sideBarOpen
-      };
-    }
     default:
       return {
         ...state, sideBarOpen: false
@@ -50,12 +39,10 @@ export const layout = (state = {}, action) => {
 /** exports **/
 export const actions = {
   SET_ITEMS_PER_PAGE,
-  SET_PAGE_NUM,
-  TOGGLE_SIDEBAR
+  SET_PAGE_NUM
 };
 
 export const actionCreators = {
   setItemsPerPage,
-  setPageNum,
-  toggleSideBar
+  setPageNum
 };

@@ -5,13 +5,12 @@ import { routes } from 'config/constants';
 import { actionCreators as appActions } from 'modules/app/duck';
 import { actionCreators as layoutActions } from 'modules/layout/duck';
 import Header from 'components/Header';
-import SideBar from 'components/SideBar';
 import Browse from 'views/Browse';
 import Favorite from 'views/Favorite';
 
 const appContext = {
   header: {
-    height: 50,
+    height: 100,
   },
   grid: {
     itemsPerRow: 6,
@@ -40,7 +39,6 @@ const App = () => {
     <Router>
       <Header />
       <div className='main' style={{ marginTop: `${appContext.header.height}px` }}>
-        <SideBar />
         <Switch>
           <Redirect from='/index.html' to={routes.BROWSE} />
           <Route exact path='/'>

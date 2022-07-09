@@ -1,0 +1,20 @@
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0px;
+
+  .nav-item {
+    white-space: nowrap;
+    margin: 0px 20px;
+    color: #00a6ed;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.active {
+      border-bottom: 3px solid #00a6ed;
+      cursor: initial;
+    }
+  }
+}
