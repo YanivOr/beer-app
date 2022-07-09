@@ -1,4 +1,2 @@
-export const routes = {
-  BROWSE: '/browse',
-  FAVORITE: '/favorite'
-};
+export const BROWSE = '/browse';
+export const FAVORITE = '/favorite';

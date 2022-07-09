@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { BROWSE, FAVORITE } from 'config/constants';
 import './NavBar.scss';
 
-const BROWSE = '/browse';
-const FAVORITE = '/favorite';
-
-const navItems = [BROWSE, FAVORITE];
+export const navItems = [ BROWSE, FAVORITE ];
 
 const NavBar = () => {
   const history = useHistory();

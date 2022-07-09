@@ -1,7 +1,7 @@
 import React, { createContext, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { routes } from 'config/constants';
+import { BROWSE, FAVORITE } from 'config/constants';
 import { actionCreators as appActions } from 'modules/app/duck';
 import { actionCreators as layoutActions } from 'modules/layout/duck';
 import Header from 'components/Header';
@@ -40,12 +40,12 @@ const App = () => {
       <Header />
       <div className='main' style={{ marginTop: `${appContext.header.height}px` }}>
         <Switch>
-          <Redirect from='/index.html' to={routes.BROWSE} />
+          <Redirect from='/index.html' to={BROWSE} />
           <Route exact path='/'>
-            <Redirect to={routes.BROWSE} />
+            <Redirect to={BROWSE} />
           </Route>
-          <Route path={routes.BROWSE} component={Browse} />
-          <Route path={routes.FAVORITE} component={Favorite} />
+          <Route path={BROWSE} component={Browse} />
+          <Route path={FAVORITE} component={Favorite} />
           <Route component={() => <div style={{ color: 'red' }}>Not found</div>} />
         </Switch>
       </div>
