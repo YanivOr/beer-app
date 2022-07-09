@@ -151,10 +151,12 @@ table {
   border-collapse: separate;
   border-spacing: 0;
 }
+
 th {
   font-weight: bold;
   vertical-align: bottom;
 }
+
 td {
   font-weight: normal;
   vertical-align: top;
@@ -184,12 +186,15 @@ pre {
 input[type='radio'] {
   vertical-align: text-bottom;
 }
+
 input[type='checkbox'] {
   vertical-align: bottom;
 }
+
 .ie7 input[type='checkbox'] {
   vertical-align: baseline;
 }
+
 .ie6 input {
   vertical-align: text-bottom;
 }
@@ -224,9 +229,11 @@ sup {
   line-height: 0;
   position: relative;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
@@ -261,21 +268,8 @@ input[type='button'] {
   overflow: visible;
 }
 
-// Main container of the website
 .main {
-  width: calc(100vw - 67px);
-  min-height: calc(100vh - 50px);
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  overflow: hidden;
-  padding: 40px;
-  background: #f5f6f8;
-}
-
-.main_content {
-  background-color: white;
-  border-radius: 0 100px 0 0;
-  padding: 50px 40px;
-  box-shadow: 0px 0px 2px 0px #d4d4d4;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }

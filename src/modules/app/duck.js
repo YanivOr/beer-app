@@ -4,8 +4,14 @@ const INIT_APP = `${prefix}/INIT_APP`;
 const SET_APP_ERROR = `${prefix}/SET_APP_ERROR`;
 
 /** action creators **/
-const initApp = () => ({ type: INIT_APP });
-const setAppError = error => ({ type: SET_APP_ERROR, payload: error });
+const initApp = () => ({
+  type: INIT_APP
+});
+
+const setAppError = error => ({
+  type: SET_APP_ERROR,
+  payload: error
+});
 
 /** reducer **/
 export const app = (state = {}, action) => {
@@ -13,7 +19,6 @@ export const app = (state = {}, action) => {
     case INIT_APP:
       return {
         ready: false,
-        updating: false,
         error: null
       };
     case SET_APP_ERROR:

@@ -1,0 +1,9 @@
+.SideBar {
+  overflow: hidden;
+  border: 1px solid #333333;
+  width: 300px;
+
+  &>div {
+    white-space: nowrap;
+  }
+}

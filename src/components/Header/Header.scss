@@ -1,0 +1,17 @@
+.Header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #ffffff;
+
+  .sidebar-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
